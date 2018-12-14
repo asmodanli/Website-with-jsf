@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    
+    <head>
+    <title> Main Page </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <!-- css documents  --> 
+    <link href="css/style.css" rel="stylesheet" type="text/css"/>
+    <link href="css/icerik.css" rel="stylesheet" type="text/css"/>
+
+</head>
+<body>
+<div class="banner">
+    <div class="banner-container">  
+        <div class="banner-left">
+
+            <img src="img/logo2.png" />
+            <!-- end .banner-left --></div>
+        <div class="banner-right">
+            <div class="banner-right-top">
+                <table  width="650" cellspacing="5" cellpadding="5">
+                    <tbody>
+                        <tr>
+                            <td width="500"> </td>
+                            <td > <img src="img/exit-website.png"  alt="" longdesc="#"/>   </td>
+                    </tr>
+                    </tbody>
+                </table>
+
+
+
+                <!-- end .banner-right-top --></div>
+
+            <div class="banner-right-bottom"> 
+
+
+
+
+                <!--
+                <div class="topnav">
+                  <a class="active" href="#home"> Anasayfa </a>
+                  <a href="#news"> Tanımlar  </a>
+                  <a href="#contact"> İşlemler  </a>
+                  <a href="#about">İletişim </a>
+                </div>
+                --> 
+
+                <!-- end .banner-right-bottom --></div>
+
+            <!-- end .banner-right --></div>
+        <!-- end .banner-container --></div>
+    <!-- end .banner --></div>
+<span class="clear">   <!-- end .clear --></span>    
+
+
+<!--   Orta kısım --> 
+
+
+
+<div class="container">
+    <div class="middle-area">
+        <div class="middle-left-all">
+            <h3 style="margin-left: 100px;"> Tanımlar </h3><br/>
+             <div class="mainpageLeftMenu">
+                <ul>
+                    <li> <a href="site-tanimi.xhtml" >   Site Tanımı  </a>  </li>
+                    <li> <a href="blok-daire-tanimi.xhtml" > Blok Daire Tanımı     </a>            </li>
+                    <li> <a href="daire-tanimi.xhtml" > Daire Tanımı    </a>    </li>
+                    <li> <a href="kisi-tanimi.xhtml" > Kişi Tanımları </a>   </li>
+                    <li> <a href="hizmetli-tanimi.xhtml" > Hizmetli Tanımları </a>   </li>
+                    <li> <a href="kasa-tanimi.xhtml" > Kasa Tanımı    </a> </li>
+                    <li> <a href="banka-tanimi.xhtml" > Banka Tanımı   </a>   </li>
+                    <li>      </li>
+                </ul>
+                <!-- end .mainpageLeftMenu --></div>  <br /> <br />             
+
+            <h3 style="margin-left: 100px;"> İşlemler  </h3><br/>
+            <div class="mainpageLeftMenu">
+                <ul>
+                    <li>  <a href="aidat-islemleri.xhtml" > Aidat İşlemleri </a> </li>
+                    <li> <a href="odeme-tahsilat-islemleri.xhtml" >  Ödeme Tahsilat İşlemleri   </a> </li>
+                    <li>   <a href="borc-alacak-durumu.xhtml" > Borç Alacak Durumu </a>     </li>                   
+                    <li>       </li>
+                </ul>
+            </div>    <!-- end .mainpageLeftMenu -->  
+
+
+
+
+
+
+
+            <!-- end .middle-left-all --></div>
+        <div class="middle-right-all"> 
+
+
+
+
+            <div class="mainpageLeftMiddle">
+
+                <br/>
+                
+                
+               <h:form>
+
+                   
+ <h:panelGrid columns="3" >
+     
+ <h:outputText value="Blok Kod tanımını yapınız"/>
+ <h:inputText class="text" id="BlokCodeText" required="true"
+ requiredMessage="Lütfen Tc Kimlik Numarasını Giriniz:"
+ value="#{BlokDefinitionInfoBean.code}" maxlength="11" />
+ <h:message for="BlokCodeText"/>
+ 
+ <h:outputText value="Blok Adı : "/>
+ <h:inputText class="text" id="BlokNameText" required="true"
+ requiredMessage="Lütfen Blok adını giriniz :"
+ value="#{BlokDefinitionInfoBean.name}" maxlength="30"/>
+ <h:message for="BlokNameText"/>
+ 
+ <h:outputText value="Blok numarası : "/>
+ <h:inputText class="text" id="BlokNumberText" required="true"
+ requiredMessage="Lütfen Blok numarasını giriniz: "
+ value="#{BlokDefinitionInfoBean.blokNumber}" maxlength="30"/>
+ <h:message for="BlokNumberText" />
+ 
+ <h:outputText value="BUILDINGREF : "/>
+ <h:inputText class="text" id="BUILDINGREFINT" required="true"
+ requiredMessage="Lütfen Blok numarasını giriniz: "
+ value="#{BlokDefinitionInfoBean.buildingRef}" maxlength="30"/>
+ <h:message for="BlokNumberText" />
+ 
+  <h:outputText value=" ISACTİVE : "/>
+  <h:inputText class="text" id="ISACTİVEINT" required="true"
+ requiredMessage="Lütfen Blok numarasını giriniz: "
+ value="#{BlokDefinitionInfoBean.isActive}" maxlength="30"/>
+ <h:message for="BlokNumberText" />
+ 
+ 
+ </h:panelGrid>
+ <h:commandButton class="formGiris1" value="Personeli Kaydet" onclick="alert('Personel Eklendi.')"
+                 action="#{BlokDefinitionInfoBean.saveBlokDefinition()}"/>
+
+ </h:form>
+<br/>
+                <h:form> 
+                    <h:dataTable value="#{BlokDefinitionInfoBean.showBlokDefinition()}" var="myvariable"
+border="1" cellpadding="5" cellspacing="0">
+    <!-- Her column bloğu bir döngüyü ifade eder. Tablodaki o column bitince diğer column'a geçer-->
+<h:column>
+<f:facet name="header">Blok Kodu </f:facet>
+    #{myvariable.Code}
+</h:column>
+<h:column>
+<f:facet name="header">Blok Adı </f:facet>
+    #{myvariable.Name_}
+</h:column>
+<h:column>
+<f:facet name="header">Blok Numarası</f:facet>
+#{myvariable.BlokNumber}
+</h:column>
+<h:column>
+<f:facet name="header">Kullanım Durumu </f:facet>
+#{myvariable.IsActive}
+</h:column>
+   <h:column>
+          <h:form>
+              <h:commandButton class="formDelete" value="Bu Kaydı Sil" action="#{BlokDefinitionInfoBean.sil()}">
+                  <f:setPropertyActionListener target="#{BlokDefinitionInfoBean.silinecek_CODE}" value="#{myvariable.CODE}" />
+              </h:commandButton>
+           </h:form>
+      </h:column>
+    
+ </h:dataTable>
+</h:form>
+
+                <!-- end .mainpageLeftMenu --></div>
+
+
+
+
+
+
+
+            <!-- end .middle-right-all --></div>
+        <!-- end .middle-area --></div>
+    <span class="clear">   <!-- end .clear --></span>
+
+
+
+    <!-- end .container --></div>       
+
+
+
+
+<div class="buttom">
+    <div class="buttom-container">
+
+        <img src="img/footer.png" width="100%"/><br/> 
+        <b style="text-align: center; "> Building Management System </b>  <span >   2017 Tüm Hakları Gizlidir </span>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

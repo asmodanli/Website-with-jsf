@@ -1,0 +1,172 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+
+    <html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://xmlns.jcp.org/jsf/passthrough">
+    <h:head>
+        <title>HOŞGELDİNİZ</title>
+ <script type="text/javascript">
+    
+</script>
+        <link href="styleLogin.css" rel="stylesheet" type="text/css"></link>
+        <link href="reset.css" rel="stylesheet" type="text/css"></link>
+     
+        <link href="https://fonts.googleapis.com/css?family=Monoton|Patua+One" rel="stylesheet"></link>
+    </h:head>
+    <h:body>
+        
+       <div id="site" style="height:1000px">
+           <div id="header">
+                
+                <div id="site_adi">
+                    <div id="logo">
+                    <img src="images/header/logo.jpg" style="margin-top: 30px;margin-left: 50px" />
+                </div>
+                     
+                    <div id="menu">
+                           
+                    <div id="social_media">
+                            <a href=""><img src="images/header/facebook.png" alt="facebook_logo"/></a>				
+                            <a href=""><img src="images/header/twitter.png" alt="twitter_logo"/></a>
+                            <a href=""><img src="images/header/inst.png" alt="instagram_logo"/></a>
+                        
+                    </div>
+                        
+                    </div>
+                    
+                    
+                    </div>
+
+                
+                        <div id='cssmenu'>            
+                                  <ul>
+                                      <li><a href='index.xhtml'>Anasayfa</a></li>
+                                         <li class='has-sub'><a href='#'>Yurt İçi</a>
+                                            <ul style="z-index:100">
+                                                <li><a href="pages/abant.xhtml">Abant</a></li>
+                                                <li><a href="pages/kapadokya.xhtml">Kapadokya</a></li>
+                                                <li><a href="pages/karadeniz.xhtml">Karadeniz</a></li>
+                                                 <li><a href="pages/pamukkale.xhtml">Pamukkale</a></li>
+                                            </ul>
+                                         </li>                                    
+                                          <li class='has-sub'><a href='#'>Yurt Dış</a>
+                                            <ul style="z-index:100">                                                 
+                                                <li><a href="pages/fransa.xhtml" >Fransa</a></li>
+                                                <li><a href="pages/balkanlar.xhtml" >Balkanlar</a></li>
+                                                <li><a href="pages/italya.xhtml" >İtalya</a></li>
+                                                <li><a href="pages/dubai.xhtml" >Dubai</a></li>
+                                            </ul>
+                                         </li>                                        
+                                      <li class='has-sub'><a href="pages/hizmet.xhtml">Hizmet</a></li>
+                                      <li class='has-sub'><a href="index.xhtml">Çıkış</a>
+                               
+                                         </li>
+                                      <li class='last'><a href="pages/iletisim.xhtml">İletişim</a></li>
+                                 </ul>
+                                        
+                  </div>
+       
+          
+           
+           </div>
+         
+             <div id="content" style="width:1150px; height:700px; padding-left: 50px;">
+                 
+                 <br></br><br></br>
+                 
+                <!-- <div class="sepet">
+                     <h:dataTable  value="" var="Tur" style=" border-collapse:collapse;   border:1px solid #000000;" class = "employeeTable" id="TurTable">
+         
+         <h:column class = "employeeTableHeader">
+             <f:facet name="header">Tur Adı</f:facet>
+            #{Tur.geziName}         
+                
+         </h:column>
+         <h:column class = "employeeTableHeader">
+            <f:facet name="header">Gün Sayısı</f:facet>
+            #{Tur.geziGunu}
+         </h:column>
+         <h:column class = "employeeTableHeader">
+              <f:facet name="header">Fiyat</f:facet>
+            #{Tur.fiyat}
+           
+         </h:column>
+             <h:column class = "employeeTableHeader">                 
+            <f:facet name="header">Tarih</f:facet>                   
+            #{Tur.date}
+         </h:column>    
+                  <h:column class = "employeeTableHeader">
+                  
+                      <h:commandButton value="Satın al"   /> 
+           
+           
+         </h:column>
+      </h:dataTable>
+                     
+                     
+                 </div>-->
+         <div class="guncelle" style="margin-bottom:50px;">
+         <h1>Bilgilerinizi güncelleyin: </h1>
+            <h:form>             
+        
+                <h:inputText value="#{user.name}" p:placeholder="Adınızı giriniz" ></h:inputText>
+                <h:inputText value="#{user.surname}" p:placeholder="Soyadınızı giriniz" ></h:inputText>
+             <!--  <h:inputText value="#{user.username}" p:placeholder="Kullanıcı adınızı giriniz" ></h:inputText>-->
+                <h:inputText value="#{user.mail}" p:placeholder="Mailinizi giriniz" ></h:inputText>
+                <h:inputSecret value="#{user.password}" p:placeholder="Parolanızı giriniz" ></h:inputSecret>  
+           
+                
+                <div class="submit" >    <h:commandButton value="Guncelle" style="margin-top:20px;" action="#{user.update()}" /> </div>
+               
+             
+            </h:form>
+       
+          </div>
+         
+                 <div class="sil">
+                      <h1>Hesabımı sil</h1>
+                     <h:form>   
+                         <h1>PAROLANIZI GİRDİĞİNİZ TAKTİRDE HESABINIZ SİLİNECEKTİR!</h1>
+                         <h:inputSecret value="#{user.password}" p:placeholder="Parolanızı giriniz" ></h:inputSecret>
+                         <div class="submit">    <h:commandButton value="sil" action="#{user.delete()}" /> </div>
+                     </h:form>
+                 </div>
+                 
+                 <div class="istek">
+                     <h1>İstek yolla</h1>
+                      <h:form>
+                          <h:inputText value="#{user.istek}" p:placeholder="Mesajınızı giriniz." />
+                          <h:commandButton value="Gönder" action="#{user.mesajYolla()}" />
+    	  </h:form>
+                     
+                 </div>
+                 
+                 <div class="istek">
+                     <h1>Şikayet yolla</h1>
+                      <h:form>
+                          <h:inputText value="#{user.sikayet}" p:placeholder="Mesajınızı giriniz." />
+                          <h:commandButton value="Gönder" action="#{user.sikayetYolla()}" />
+    	  </h:form>
+                     
+                 </div>
+
+    
+  
+     </div>   
+           
+        
+            <div id="footer">
+                <a id="ftr" href="index.xhtml">Anasayfa</a>
+                <a id="ftr" href="#">Yurtiçi</a>
+                <a id="ftr" href="#">Yurtdışı</a>
+                <a id="ftr" href="pages/hizmet.xhtml">Hizmet</a>
+                <a id="ftr" href="login.xhtml">Giriş Yap/Kaydol</a>
+                <a id="ftr" href="pages/iletisim.xhtml">İletişim</a>
+                
+            </div>
+       </div>
+    </h:body>
+</html>
+

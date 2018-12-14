@@ -1,0 +1,264 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+
+    <html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <title>İtalya Turları</title>
+ <script type="text/javascript">
+    
+</script>
+        <link href="../style.css" rel="stylesheet" type="text/css"></link>
+        <link href="../reset.css" rel="stylesheet" type="text/css"></link>
+     
+        <link href="https://fonts.googleapis.com/css?family=Monoton|Patua+One" rel="stylesheet"></link>
+        <style>
+            .slider{
+	width: 1200px; 
+	position: relative;
+	height:500px;
+	padding-top: 600px; 
+	
+	
+
+	box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.75);
+}
+
+
+
+.slider>img{
+	position: absolute;
+	left: 0; top: 0;
+	transition: all 0.5s;
+}
+
+.slider input[name='slide_switch'] {
+	display: none;
+}
+
+.slider label {
+
+        
+	margin : 20px 50px 0 20px;
+	border: 3px solid #999;
+	
+	float: left;
+	cursor: pointer;
+	transition: all 0.5s;
+	
+	
+	opacity: 0.6;
+}
+
+.slider label img{
+	display: block;
+}
+
+
+.slider input[name='slide_switch']:checked+label {
+	border-color: #666;
+	opacity: 1;
+}
+
+
+.slider input[name='slide_switch'] ~ img {
+	opacity: 0;
+	transform: scale(1.1);
+}
+/*That hides all main images at a 110% size
+On click the images will be displayed at normal size to complete the effect
+*/
+.slider input[name='slide_switch']:checked+label+img {
+	opacity: 1;
+	transform: scale(1);
+}
+
+
+#turlar{
+    float:left;
+    width: 1400px;
+    height: 300px;
+    margin-left: 50px;
+    margin-top: 50px;
+    font-size: 20px;
+    float:left;
+    display: inline;
+}
+#yazitur{
+    width:550px; height:100px; float:left; display:inline;
+   
+}
+#tur_table{
+       width: 340px;
+        height: 340px;
+        border: double white;
+       background-color: #93c6c9;
+        margin-left:100px; float:left;   display: inline;
+        padding-left: 20px;
+        padding-top: 20px;
+}
+.bilgi{
+    width: 350px;
+    height: 70px;
+    font-family: arial;
+}
+
+        </style>
+    </h:head>
+    <h:body>
+       <div id="site">
+            <div id="header">
+                
+                <div id="site_adi">
+                    <div id="logo">
+                    <img src="../images/header/logo.jpg" style="margin-top: 30px;margin-left: 50px" />
+                </div>
+                     
+                    <div id="menu">
+                           
+                    <div id="social_media">
+                            <a href=""><img src="../images/header/facebook.png" alt="facebook_logo"/></a>				
+                            <a href=""><img src="../images/header/twitter.png" alt="twitter_logo"/></a>
+                            <a href=""><img src="../images/header/inst.png" alt="instagram_logo"/></a>
+                        
+                    </div>
+                        
+                    </div>
+                    
+                    
+                    </div>
+
+                
+                        <div id='cssmenu'>            
+                                  <ul>
+                                      <li><a href='../index.xhtml'>Anasayfa</a></li>
+                                         <li class='has-sub'><a href='#'>Yurt İçi</a>
+                                            <ul style="z-index:100">
+                                                <li><a href="abant.xhtml">Abant</a></li>
+                                                <li><a href="kapadokya.xhtml">Kapadokya</a></li>
+                                                <li><a href="karadeniz.xhtml">Karadeniz</a></li>
+                                                 <li><a href="pamukkale.xhtml">Pamukkale</a></li>
+                                            </ul>
+                                         </li>                                    
+                                          <li class='has-sub'><a href='#'>Yurt Dış</a>
+                                            <ul style="z-index:100">                                                 
+                                                <li><a href="fransa.xhtml" >Fransa</a></li>
+                                                <li><a href="balkanlar.xhtml" >Balkanlar</a></li>
+                                                <li><a href="italya.xhtml" >İtalya</a></li>
+                                                <li><a href="dubai.xhtml" >Dubai</a></li>
+                                            </ul>
+                                         </li>                                        
+                                      <li class='has-sub'><a href="hizmet.xhtml">Hizmet</a></li>
+                                      <li class='has-sub'><a href="../login.xhtml">Giriş Yap/ Kayıt Ol</a>
+                               
+                                         </li>
+                                      <li class='last'><a href="iletisim.xhtml">İletişim</a></li>
+                                 </ul>
+                                        
+                  </div>
+                </div>
+       
+          <div class="slider">
+	<input type="radio" name="slide_switch" id="id1"/>
+	<label for="id1">
+		<img src="../images/yurtdisi/italya/como1.jpg" width="100"/>
+	</label>
+	<img src="../images/yurtdisi/italya/como.jpg"/>
+	
+	<!--Lets show the second image by default on page load-->
+	<input type="radio" name="slide_switch" id="id2" checked="checked"/>
+	<label for="id2">
+		<img src="../images/yurtdisi/italya/floransa1.jpg" width="100"/>
+	</label>
+	<img src="../images/yurtdisi/italya/floransa.jpg"/>
+	
+	<input type="radio" name="slide_switch" id="id3"/>
+	<label for="id3">
+		<img src="../images/yurtdisi/italya/capri1.jpg" width="100"/>
+	</label>
+	<img src="../images/yurtdisi/italya/capri.jpg"/>
+	
+	<input type="radio" name="slide_switch" id="id4"/>
+	<label for="id4">
+		<img src="../images/yurtdisi/italya/pisa1.jpg" width="100"/>
+	</label>
+	<img src="../images/yurtdisi/italya/pisa.jpg"/>
+	
+	<input type="radio" name="slide_switch" id="id5"/>
+	<label for="id5">
+		<img src="../images/yurtdisi/italya/roma1.jpg" width="100"/>
+	</label>
+	<img src="../images/yurtdisi/italya/roma.jpg"/>
+        
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        
+        <div id="turlar">
+            <div id="yazitur" >
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam blandit sed orci quis pretium. Cras auctor libero at eros convallis, et ultrices diam finibus. Duis dignissim lectus ac ante accumsan, elementum rhoncus ex tempus. In hac habitasse platea dictumst. Mauris tempus, dui at porttitor faucibus, sapien sapien malesuada augue, et convallis urna massa sit amet enim. Aenean eget facilisis metus, dapibus consectetur urna. Praesent id dolor et neque scelerisque malesuada. Integer iaculis sapien eu quam posuere, in posuere metus tempor. Donec eget fringilla quam. Donec rutrum varius metus, id tristique urna egestas ut. Pellentesque nibh orci, pretium auctor lorem lobortis, efficitur tempus sapien. Phasellus ut nibh sit amet augue rhoncus hendrerit. Phasellus ullamcorper, lacus quis auctor congue, neque ligula faucibus lorem, non lobortis est erat eget lacus. 
+                    Praesent sit amet accumsan libero. In semper eros eu velit eleifend, in condimentum turpis euismod. Nunc euismod sem a pulvinar mattis. </p>
+            </div>
+                           <div id="tur_table" >
+                               
+                                   
+                                                  
+                                                    <div class="bilgi">
+                                                        
+                                                            Tur adı:
+                                                            <p>İtalya Turu</p>
+                                                        
+                                                                                                       
+                                                    </div>
+                                   
+                                                         <div class="bilgi">
+                                                          
+                                                        Gün:
+                                                        <p>3 gün</p>
+                                                       
+                                                    </div>
+                                   
+                                                      <div class="bilgi">
+                                                          
+                                                        FİYAT:
+                                                        <p>1899,00 ₺</p>
+                                                        
+                                                    </div>
+                                   
+                                                      <div class="bilgi">
+                                                       En erken tarih:
+                                                       <p>26.5.2018</p><br/>
+                                                     </div> 
+                                                    <div class="bilgi">
+                                                        Gezilecek Yerler:
+                                                        <p>
+                                                             Nullam ,Vulputate, Dolor ac sem , Laoreet 
+                                                        </p><br/>
+                                                         </div>
+                                          
+                                   
+                 </div>
+        </div> 
+</div>
+           
+         
+           
+          
+           
+           <div id="footer">
+                <a id="ftr" href="../index.xhtml">Anasayfa</a>
+                <a id="ftr" href="#">Yurtiçi</a>
+                <a id="ftr" href="#">Yurtdışı</a>
+                <a id="ftr" href="hizmet.xhtml">Hizmet</a>
+                <a id="ftr" href="#">Giriş Yap/Kaydol</a>
+                <a id="ftr" href="iletisim.xhtml">İletişim</a>
+                
+            </div>
+        
+       </div>
+        
+    </h:body>
+</html>
+

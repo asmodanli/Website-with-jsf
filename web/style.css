@@ -1,0 +1,429 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900');
+
+#site{
+    width:1200px;
+    height: 2000px;
+    margin: auto;
+}
+#header{
+width:1200px;
+height:302px;
+background-color:#008B8B;
+padding-top:20px;
+  padding-bottom: 0px;
+}
+#content{
+    width:1200px;
+    height: 1300px;
+    margin-top: 000px;
+    margin: auto;
+    background-color: #008B8B;
+    float:left;
+}
+#social_media{
+    width:90px;
+    height:20px;
+    margin-left: 300px;
+    float:right;
+ 
+}
+#menu{
+    width:90px;
+    height:20px;
+    margin-left: 390px;
+    float:right;
+}
+body #site #header #site_adi  #social_media a img{
+	width:25px;
+	height:25px;
+}
+
+#cssmenu{
+    width:auto;
+    height:60px;
+    float:right;
+display:inline;
+    margin-right: 30px;
+}
+ 
+     #cssmenu ul,
+#cssmenu li,
+#cssmenu span,
+#cssmenu a {
+    margin: 0;
+    padding: 0;
+}
+
+#cssmenu {
+    
+    height:70px;
+}
+
+#cssmenu:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+#cssmenu a {
+    display: inline-block;
+    font-family: Calibri, Arial, sans-serif;
+    color: #131210;
+    text-decoration: none;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    transition: all 0.2s;
+    font-size: 15px;
+}
+.buton{
+  background: #978152;
+    box-shadow: inset 1px 1px 3px rgba(19, 18, 16, 0.2);
+    -moz-box-shadow: inset 1px 1px 3px rgba(19, 18, 16, 0.2);
+    -webkit-box-shadow: inset 1px 1px 3px rgba(19, 18, 16, 0.2);
+    border-radius: 17px;
+    -moz-border-radius: 17px;
+    -webkit-border-radius: 17px;
+    line-height: 24px;
+    padding: 5px 10px;
+    
+}
+span{
+    color:#40E0D0;
+}
+#cssmenu a:hover {
+    background: #af9a6d;
+}
+
+#cssmenu ul {
+    list-style: none;
+    height: 34px;
+    padding: 10px 0;
+    
+}
+
+#cssmenu > ul > li {
+    float: left;
+    height: 34px;
+    margin: 0 5px;
+    position: relative;
+}
+
+#cssmenu > ul > li > a {
+    background: #e3e8f3;
+    box-shadow: inset 1px 1px 3px rgba(19, 18, 16, 0.2);
+    -moz-box-shadow: inset 1px 1px 3px rgba(19, 18, 16, 0.2);
+    -webkit-box-shadow: inset 1px 1px 3px rgba(19, 18, 16, 0.2);
+    border-radius: 17px;
+    -moz-border-radius: 17px;
+    -webkit-border-radius: 17px;
+    line-height: 24px;
+    padding: 5px 10px;
+}
+
+#cssmenu > ul > li.active .buton {
+    background: #131210;
+    color: #f8f5ee;
+}
+
+#cssmenu .has-sub ul {
+    background: #f8f5ee;
+    border: 1px solid #aa9961;
+    border-top: 0 none;
+    height: 0;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    opacity: 0;
+    top: 44px;
+    left: 0;
+    width: 100px;
+    -webkit-transition: opacity 0.2s;
+    -moz-transition: opacity 0.2s;
+    -o-transition: opacity 0.2s;
+    -ms-transition: opacity 0.2s;
+    transition: opacity 0.2s;
+}
+
+#cssmenu .has-sub:after {
+    content: '';
+    display: block;
+    padding: 0 10px;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    height: 10px;
+    width: 200%;
+}
+
+#cssmenu .has-sub:hover ul {
+    border-radius: 0 0 5px 5px;
+    -moz-border-radius: 0 0 5px 5px;
+    -webkit-border-radius: 0 0 5px 5px;
+    height: auto;
+    opacity: 1;
+    padding: 10px;
+}
+
+#cssmenu .has-sub li,
+#cssmenu .has-sub li a {
+    padding: 0 5px;
+    width: 100%;
+    font-size: 15px;
+}
+
+
+#cssmenu .has-sub li {
+    margin: 8px 0;
+}
+
+#cssmenu .has-sub li a {
+    border-radius: 5px 0 0 5px;
+    -moz-border-radius: 5px 0 0 5px;
+    -webkit-border-radius: 5px 0 0 5px;
+    line-height: 120%;
+}
+
+
+#search{
+	width:180px;
+	height:20px;
+	background-color:white;
+	margin-right:100px;
+	margin-top:15px;
+	border-radius:20px;
+                      float:left;
+                        
+}
+#logo{
+    float:left;
+    margin-right:0px;
+    margin-bottom: 0px;
+}
+#name{
+    width:200px;
+    height:100px;
+       float:left;
+    margin-right:200px;
+    margin-top: 20px;
+}
+#site_adi{
+    float:left;
+    
+    margin-right: 0px;
+}
+body #site #header #site_adi h1{
+    font-family: 'Patua One', cursive;
+    color:white;
+
+}
+
+
+
+
+
+.slider{
+        width:1200px;
+       height:500px;
+        margin-right: auto;
+
+	overflow:hidden;
+	position:relative;
+}
+
+.slider{
+	overflow:hidden;
+	position:relative;
+}
+ .slider ul.slider_liste li{
+	width:100%;
+	float:left;
+}
+ .slider ul.slider_liste li a img{
+	width:1200px;
+}
+a.onceki,a.sonraki{
+	width:25px;
+	height:25px;
+	text-decoration:none;
+	font:32px/70px Arial;
+	color:#fff;
+	border-radius:100px;
+	position:absolute;
+	top:50%;
+	margin-top:-25px;
+	text-align:center;
+	background:rgba(0,0,0,0.6);
+}
+a.onceki{left:20px;}	
+a.sonraki{right:20px;}
+a.onceki:hover,a.sonraki:hover{
+	background:#000;
+}
+
+.kutu{
+    width:900px;
+    margin:auto;
+    height:300px;
+    margin-top: 10px;
+    background-color: #e3e8f3;
+    padding-top: 15px;
+ 
+}
+#img1{
+    overflow:hidden;
+    background-repeat: no-repeat;
+    background-position: center; 
+    margin-right: 20px;
+    margin-left: 20px;
+}
+#img2{
+    width:400px;
+    height:270px;
+    overflow:hidden;
+    background-repeat: no-repeat;
+    background-position: center; 
+    margin-left: 20px;
+    margin-right:20px;
+}
+
+#imgp{
+    margin-left: 20px;
+    margin-right:20px;
+}
+#h6c{
+    text-align: center;
+    font-size: 30px;
+    color:#DC143C;
+    font-weight: bold;
+}
+#akutu{
+    margin-left:50px;
+    text-decoration: none;
+    border:5px;
+    padding:10px;
+    color:#e3e8f3;
+    background-color: #008B8B;
+    font-weight: bold;
+}
+#akutu:hover{
+    background-color: #008B9B;
+    color:#e3e8e3;
+}
+#hizmet{
+    font-family: sans-serif;
+    margin-left: 50px;
+    margin-right: 50px;
+    border: #008B9B;
+}
+p.hizmet {
+    border-left: 6px solid #2d4273;
+    background-color: #DCDCDC;
+    border-right:6px solid #2d4273;
+    font-family: sans-serif;
+    margin-left: 50px;
+    margin-right: 50px;
+    padding-top: 10px;
+    padding-right:10px;
+    padding-bottom:10px;
+    padding-left:10px;
+}
+p.hizmet1 {
+    border-left: 6px solid #2d4273;
+    background-color: #DCDCDC;
+    border-right:6px solid #2d4273;
+    font-family: sans-serif;
+    margin-left: 50px;
+    margin-right: 50px;
+    text-decoration: underline;    
+    font-size:30px;
+    padding-top: 10px;
+    padding-right:10px;
+    padding-bottom:10px;
+    padding-left:10px;
+}
+#footer{
+    width:600px;
+    height:20px;
+    position: absolute;
+    margin-top: 100px;
+    margin-left: 330px;
+    background-color: #008B8B;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+}
+#ftr{
+    padding-top: 15px;
+    padding-right:15px;
+    padding-bottom:15px;
+    padding-left:15px;
+    text-decoration: none;
+    color:#E6E6FA;
+    font-weight: bold;
+}
+#turkuaz{
+    color:#40E0D0;
+}
+h1{
+    color:#FFEFD5;
+    font-size: 30px;
+}
+#yazi{
+    width:300px;
+    height:60px;
+    margin-left: auto;
+    text-align: center;
+    color:#2d4273;
+    font-size: 150%;
+    margin-left: 20px;
+}
+            
+p.gezi{
+    border-left: 6px solid #DC143C;
+    background-color: #e3e8f3;
+    border-right:6px solid #DC143C;
+    font-family: sans-serif;
+    margin-left: 50px;
+    margin-right: 50px;
+    padding-top: 10px;
+    padding-right:10px;
+    padding-bottom:10px;
+    padding-left:10px;
+}
+#gezibaslik{
+    margin-top:50px;
+    text-align: center;
+    font-size: 70px;
+    color:#DC143C;
+    font-family: Impact, Charcoal, sans-serif;
+}
+#turlar{
+    float:left;
+    width: 750px;
+    height: 300px;
+    margin-left: 50px;
+    margin-top: 50px;
+    font-size: 20px;
+}
+#tablo{
+    float:right;
+    border: double white;
+    padding: 50px 20px 50px 20px;
+    width: 280px;
+    height:300px;
+    border-spacing:30px;
+
+}
+#slideralt{
+    width:1200px;
+    height:400px;
+}
+#clm{
+    background-color: #FFE4C4;
+    padding: 20px 40px 20px 40px;
+    border: double white;
+    font-size: 20px;
+
+}

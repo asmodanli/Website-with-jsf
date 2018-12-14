@@ -1,0 +1,221 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+
+    <html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <title>turkuaz.com</title>
+ <script type="text/javascript">
+    
+</script>
+        <link href="style.css" rel="stylesheet" type="text/css"></link>
+        <link href="reset.css" rel="stylesheet" type="text/css"></link>
+        <script type="text/javascript" src="jquery.js"></script>
+        <script type="text/javascript" src="slider.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Monoton|Patua+One" rel="stylesheet"></link>
+    </h:head>
+    <h:body>
+       <div id="site">
+            <div id="header">
+                
+                <div id="site_adi">
+                    <div id="logo">
+                    <img src="images/header/logo.jpg" style="margin-top: 30px;margin-left: 50px" />
+                </div>
+                     
+                    <div id="menu">
+                           
+                    <div id="social_media">
+                            <a href=""><img src="images/header/facebook.png" alt="facebook_logo"/></a>				
+                            <a href=""><img src="images/header/twitter.png" alt="twitter_logo"/></a>
+                            <a href=""><img src="images/header/inst.png" alt="instagram_logo"/></a>
+                        
+                    </div>
+                        
+                    </div>
+                    
+
+                    </div>
+
+                
+                        <div id='cssmenu'>            
+                                  <ul>
+                                      <li><a href='index.xhtml'>Anasayfa</a></li>
+                                         <li class='has-sub'><a href='#'>Yurt İçi</a>
+                                            <ul style="z-index:100">
+                                                <li><a href="pages/abant.xhtml">Abant</a></li>
+                                                <li><a href="pages/kapadokya.xhtml">Kapadokya</a></li>
+                                                <li><a href="pages/karadeniz.xhtml">Karadeniz</a></li>
+                                                 <li><a href="pages/pamukkale.xhtml">Pamukkale</a></li>
+                                            </ul>
+                                         </li>                                    
+                                          <li class='has-sub'><a href='#'>Yurt Dışı</a>
+                                            <ul style="z-index:100">                                                 
+                                                <li><a href="pages/fransa.xhtml" >Fransa</a></li>
+                                                <li><a href="pages/balkanlar.xhtml" >Balkanlar</a></li>
+                                                <li><a href="pages/italya.xhtml" >İtalya</a></li>
+                                                <li><a href="pages/dubai.xhtml" >Dubai</a></li>
+                                            </ul>
+                                         </li>                                        
+                                      <li class='has-sub'><a href="pages/hizmet.xhtml">Hizmet</a></li>
+                                      <li class='has-sub'><a href="login.xhtml">Giriş Yap/ Kayıt Ol</a>
+                               
+                                         </li>
+                                      <li class='last'><a href="pages/iletisim.xhtml">İletişim</a></li>
+                                 </ul>
+                                        
+                  </div>
+       
+          
+           
+           </div>
+           
+                              <div class="slider">
+                    
+                                  <a href="#" class="onceki"></a>
+		<a href="#" class="sonraki"></a>
+			<ul class="slider_liste">
+				<li><a href="#" class="img-bir">
+				<img src="images/header/italya.jpg" alt="" style="width:1200px;height:500px"/>
+				</a></li>
+				<li><a href="#" class="img-iki">
+				<img src="images/header/paris1.jpg" alt="" style="width:1200px;height:500px"/>
+				</a></li>
+				<li><a href="#" class="img-uc">
+				<img src="images/header/slider3.jpg" alt="" style="width:1200px;height:500px"/>
+				</a></li>
+				<li><a href="#" class="img-dort">
+				<img src="images/header/pamukkale.jpg" alt="" style="width:1200px;height:500px"/>
+				</a></li>
+				<li><a href="#" class="img-bes">
+				<img src="images/header/slider4.jpg" alt=""/>
+				</a></li>
+                        </ul>
+                </div>
+           
+           
+           <div id="content">
+               <div class="kutu">
+               <div id="yazi">
+                       <p>Size uygun turu arayın!</p>
+                   </div>
+                   
+                   <h:form class="form_class"  >
+                        <div class="yazi_tur"  style="margin-bottom: 20px;">
+                       <p>Turlar:</p>
+                   </div>
+                       <h:selectOneMenu id="drpTurAd" value="#{form_data.tur_name}" class="list">
+                           <f:selectItems value="#{form_data.get_tur_name()}" />
+                           <f:ajax execute="combo" render="TurTable" />
+                        </h:selectOneMenu>
+                    
+                   </h:form>
+                   
+               
+                   
+                  <!--  <div class="yazi_tur" style="margin-bottom: 20px;">
+                     <p>Günler:</p>
+                   </div>
+                     <h:form> <h:selectOneMenu id="drpgun" value="#{form_data.gun}" class="list">
+                         <f:selectItem itemValue="1" itemLabel="1" />
+                        <f:selectItem itemValue="2" itemLabel="2" />
+                        <f:selectItem itemValue="3" itemLabel="3" />
+                        <f:selectItem itemValue="4" itemLabel="4" />                   
+                     </h:selectOneMenu>
+                   
+                     </h:form>-->
+                   <h:form>
+                 
+                       <h:commandButton value="Ara" action="#{user.Ara(form_data)}"   style="margin-top: 60px; width:60px; padding-right: 10px" />
+                  
+                       <h:commandButton value="Temizle" action="#{user.Temizle()}"   style="margin-top: 60px; width:60px;"/>
+                       
+         <h:form>
+             
+                        
+             <h:dataTable  value="#{user.turListesi}" var="Tur" style=" border-collapse:collapse;   border:1px solid #000000;" class = "employeeTable" id="TurTable">
+         
+         <h:column class = "employeeTableHeader">
+             <f:facet name="header">Tur Adı</f:facet>
+            #{Tur.geziName}         
+                
+         </h:column>
+         <h:column class = "employeeTableHeader">
+            <f:facet name="header">Gün Sayısı</f:facet>
+            #{Tur.geziGunu}
+         </h:column>
+         <h:column class = "employeeTableHeader">
+              <f:facet name="header">Fiyat</f:facet>
+            #{Tur.fiyat}
+           
+         </h:column>
+             <h:column class = "employeeTableHeader">                 
+            <f:facet name="header">Tarih</f:facet>                   
+            #{Tur.date}
+         </h:column>    
+                  <h:column class = "employeeTableHeader">
+                  
+                      <h:commandButton value="Sepete Ekle"   action="#{user.SepeteEkle(Tur)}"/> 
+           
+           
+         </h:column>
+      </h:dataTable>
+     
+   </h:form>
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   </h:form>
+                 </div>
+               <div class="kutu">
+                   
+                   <img id="img1" src="images/header/kars1.jpg" style="float:right;width:400px;height:270px"></img>
+                   <br></br>
+                   <br></br>
+                  
+                   <h6 id="h6c">YURTİÇİ TURLARI</h6>
+                   <br></br>
+                   <p id="imgp">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus euismod congue vestibulum. Pellentesque urna ante, pretium vel molestie vitae, fermentum vitae massa. Integer massa arcu, porta et tristique non, cursus eget nunc. Maecenas id cursus diam, quis convallis risus. Aenean in neque urna. Sed rutrum blandit dolor sit amet interdum. Nunc vulputate diam eu magna sagittis suscipit. In suscipit sagittis ipsum, ac iaculis ante dapibus vel. Mauris eu turpis nulla. Curabitur at velit rutrum nibh aliquam ornare a nec sapien. 
+Nulla nec convallis justo. Aenean ac bibendum felis. Etiam vitae nisi lacus. </p>
+                   <br></br>
+                   <a id="akutu" href="#">Kapadokya</a>
+                   <a id="akutu" href="#">Abant</a>
+                   <a id="akutu" href="#">Pamukkale</a>
+                  
+                       
+                       
+                                          
+               </div>
+               <div class="kutu">
+                   <img id="img2" src="images/header/balkan1.jpg" style="float:right;width:400px;height:270px"></img>
+                    <br></br>
+                   <br></br>
+                  
+                   <h6 id="h6c">YURTDIŞI TURLARI</h6>
+                   <br></br>
+                   <p id="imgp">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus euismod congue vestibulum. Pellentesque urna ante, pretium vel molestie vitae, fermentum vitae massa. Integer massa arcu, porta et tristique non, cursus eget nunc. Maecenas id cursus diam, quis convallis risus. Aenean in neque urna. Sed rutrum blandit dolor sit amet interdum. Nunc vulputate diam eu magna sagittis suscipit. In suscipit sagittis ipsum, ac iaculis ante dapibus vel. Mauris eu turpis nulla. Curabitur at velit rutrum nibh aliquam ornare a nec sapien. 
+Nulla nec convallis justo. Aenean ac bibendum felis. Etiam vitae nisi lacus. </p>
+                   <br></br>
+                   <a id="akutu" href="#">Balkanlar</a>
+                   <a id="akutu" href="#">İtalya</a>
+                   <a id="akutu" href="#">Dubai</a>
+               </div>
+           </div>
+        
+      
+</div>
+        
+    </h:body>
+</html>
+

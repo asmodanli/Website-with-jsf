@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Facelet Title</title>
+ <script type="text/javascript">
+    
+</script>
+        <link href="style.css" rel="stylesheet" type="text/css"></link>
+        <script type="text/javascript" src="jquery.js"></script>
+        <script type="text/javascript" src="slider.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Monoton|Patua+One" rel="stylesheet"></link>
+    </h:head>
+    <h:body>
+       <div id="site">
+            <div id="header">
+                
+                <div id="site_adi">
+                    <div id="logo">
+                    <h:graphicImage  value="images/header/logo.jpg" 
+                      style=" width:170px; height:120px; margin-left:20px; border-radius: 50%;"/>
+                </div>
+                     
+                    <div id="menu">
+                           
+                    <div id="social_media">
+                            <a href=""><img src="images/header/facebook.png" alt="facebook_logo"/></a>				
+                            <a href=""><img src="images/header/twitter.png" alt="twitter_logo"/></a>
+                            <a href=""><img src="images/header/inst.png" alt="instagram_logo"/></a>
+                        
+                    </div>
+                        
+                    </div>
+                    
+                    <div id="name">
+                    <h1>kermitfirarda.com</h1>     
+                    
+                       <div id="search">
+	<h:form>
+                          <h:inputText  lang="tr" style="	width:150px; height:20px;
+	border: 1px solid #ccc; border-radius: 20px;  box-sizing: border-box; float:left;"/>
+                       </h:form>
+                            <div id="search-icon">
+                        	<a href=""><h:graphicImage value="images/header/grey.png" alt="search-icon"
+                                                           style="width:25px; height:24px;"/></a>				
+                            </div>
+                  </div>
+             </div>
+                    </div>
+                
+                                   
+            
+
+                 <h:outputText value="Blok Adı : "/>
+ <h:inputText class="text" id="BlokNameText" required="true"
+ requiredMessage="Lütfen Blok adını giriniz :"
+ value="#{BlokDefinitionInfoBean.name}" maxlength="30"/>
+ <h:message for="BlokNameText"/>
+  
+  
+                 
+                
+           
+           </div>
+           
+                        
+        </div>
+    </h:body>
+</html>
+
